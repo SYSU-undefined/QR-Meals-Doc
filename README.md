@@ -23,4 +23,6 @@
 ## 会议记录
 [点击查看会议记录](docs/会议记录.md)
 ## 技术／工作报告
+[15331224-卢家熙-为 GitHub 项目配置持续集成 (CI)](https://daddytrap.github.io/tutorial/github/2018/04/10/travis-ci-tutorial.html)
+[15331205-林伟涵-Vuejs之组件基础](https://www.jianshu.com/p/95646734fb4c)
 [15331196-林剑-关于迭代方法与用例](http://blog.resetbypear.com/2018-04-15/%E5%85%B3%E4%BA%8E%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%E4%B8%8E%E7%94%A8%E4%BE%8B/)
