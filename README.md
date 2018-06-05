@@ -48,6 +48,9 @@
 - [15331205-林伟涵-Vuejs之组件基础](https://www.jianshu.com/p/95646734fb4c)
 - [15331196-林剑-关于迭代方法与用例](http://blog.resetbypear.com/2018-04-15/%E5%85%B3%E4%BA%8E%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%E4%B8%8E%E7%94%A8%E4%BE%8B/)
 
+## 数据库设计
+[点击查看数据库设计](docs/数据库设计/qr_meals.sql)  
+
 ## 建模练习
 
 [点击查看建模练习](docs/建模练习.md)  
