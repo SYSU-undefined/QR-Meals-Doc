@@ -16,12 +16,47 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `admin` (
+  `admin_id` int(11) NOT NULL AUTO_INCREMENT,
+  `restaurant_id` int(11) NOT NULL,
+  `username` varchar(64) NOT NULL,
+  `password` char(32) NOT NULL,
+  `realname` varchar(64) NOT NULL,
+  PRIMARY KEY (`admin_id`),
+  KEY `fk_admin_restaurant_idx` (`restaurant_id`),
+  CONSTRAINT `fk_admin_restaurant` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurant` (`restaurant_Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `category`
+--
+
+DROP TABLE IF EXISTS `category`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `category` (
+  `category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) NOT NULL,
+  `description` text,
+  PRIMARY KEY (`category_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `desk`
 --
 
+DROP TABLE IF EXISTS `desk`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE IF NOT EXISTS `desk` (
+CREATE TABLE `desk` (
   `desk_id` int(11) NOT NULL AUTO_INCREMENT,
   `restaurant_id` int(11) NOT NULL,
   `description` text,
@@ -35,16 +70,20 @@ CREATE TABLE IF NOT EXISTS `desk` (
 -- Table structure for table `dish`
 --
 
+DROP TABLE IF EXISTS `dish`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE IF NOT EXISTS `dish` (
+CREATE TABLE `dish` (
   `dish_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `name` varchar(64) NOT NULL,
   `description` text,
   `restaurant_id` int(11) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   PRIMARY KEY (`dish_id`),
   KEY `fk_dish_1_idx` (`restaurant_id`),
+  KEY `fk_dish_category_idx` (`category_id`),
+  CONSTRAINT `fk_dish_category` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_dish_restaurant` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurant` (`restaurant_Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -53,17 +92,21 @@ CREATE TABLE IF NOT EXISTS `dish` (
 -- Table structure for table `order`
 --
 
+DROP TABLE IF EXISTS `order`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE IF NOT EXISTS `order` (
+CREATE TABLE `order` (
   `order_id` int(11) NOT NULL AUTO_INCREMENT,
   `restaurant_id` int(11) NOT NULL,
-  `customer_id` char(63) NOT NULL,
-  `item_count` int(11) DEFAULT NULL,
+  `customer_id` char(32) NOT NULL,
+  `item_count` int(11) NOT NULL,
   `total_price` decimal(10,2) DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `desk_id` int(11) NOT NULL,
   PRIMARY KEY (`order_id`),
   KEY `fk_order_restaurant_idx` (`restaurant_id`),
+  KEY `fk_order_desk_idx` (`desk_id`),
+  CONSTRAINT `fk_order_desk` FOREIGN KEY (`desk_id`) REFERENCES `desk` (`desk_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_order_restaurant` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurant` (`restaurant_Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -72,9 +115,10 @@ CREATE TABLE IF NOT EXISTS `order` (
 -- Table structure for table `order_item`
 --
 
+DROP TABLE IF EXISTS `order_item`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE IF NOT EXISTS `order_item` (
+CREATE TABLE `order_item` (
   `item_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `dish_id` int(11) NOT NULL,
@@ -93,12 +137,13 @@ CREATE TABLE IF NOT EXISTS `order_item` (
 -- Table structure for table `restaurant`
 --
 
+DROP TABLE IF EXISTS `restaurant`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE IF NOT EXISTS `restaurant` (
+CREATE TABLE `restaurant` (
   `restaurant_Id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  `location` text NOT NULL,
+  `name` varchar(64) NOT NULL,
+  `description` text,
   PRIMARY KEY (`restaurant_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -107,14 +152,14 @@ CREATE TABLE IF NOT EXISTS `restaurant` (
 -- Table structure for table `staff`
 --
 
-
+DROP TABLE IF EXISTS `staff`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE IF NOT EXISTS `staff` (
-  `staff_id` char(63) NOT NULL,
+CREATE TABLE `staff` (
+  `staff_id` char(32) NOT NULL,
   `restaurant_id` int(11) NOT NULL,
-  `authority` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL,
+  `post` varchar(16) NOT NULL,
+  `name` varchar(64) NOT NULL,
   PRIMARY KEY (`staff_id`),
   KEY `fk_staff_restaurant_idx` (`restaurant_id`),
   CONSTRAINT `fk_staff_restaurant` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurant` (`restaurant_Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -130,4 +175,4 @@ CREATE TABLE IF NOT EXISTS `staff` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-05 20:56:34
+-- Dump completed on 2018-06-26 12:31:02
