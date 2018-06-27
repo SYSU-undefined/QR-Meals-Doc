@@ -143,6 +143,7 @@ DROP TABLE IF EXISTS `restaurant`;
 CREATE TABLE `restaurant` (
   `restaurant_Id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
+  `location` varchar(256) NOT NULL,
   `description` text,
   PRIMARY KEY (`restaurant_Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -175,4 +176,4 @@ CREATE TABLE `staff` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-26 12:31:02
+-- Dump completed on 2018-06-27 15:10:19
