@@ -30,7 +30,7 @@
 - 8.3 逻辑架构到应用程序映射指南
 - 8.4 物理架构云上部署 dock-compose.yml 文件编写与使用
 
-[X1、meet_recording（会议记录）](docs/X1、meet%20recording/会议记录.md)  
+[X1、Meeting record（会议记录）](docs/X1、Meeting%20record（会议记录）/会议记录.md)  
 
 X2、Tech Report
 - [15331038-陈序-技术报告](https://pak-choi.github.io/系统分析与设计/2018/03/15/SAAD-Report)
