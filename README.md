@@ -28,7 +28,7 @@
 - 8.1 XX 代码规范
 - 8.2 REST API 设计规范
 - 8.3 逻辑架构到应用程序映射指南
-- 8.4 物理架构云上部署 dock-compose.yml 文件编写与使用
+- 8.4 [物理架构云上部署 dock-compose.yml 文件编写与使用](docs/8、生产规范与指南/docker-compose.md)
 
 [X1、Meeting record（会议记录）](docs/X1、Meeting%20record（会议记录）/会议记录.md)  
 
