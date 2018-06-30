@@ -31,11 +31,14 @@
 - 7. 设计
 
   - [点击查看UI设计文档](docs/UI设计.md)
-  - [点击查看数据库设计](docs/数据库设计/qr_meals.sql)  
+  - [点击查看数据库设计](docs/数据库设计/qr_meals.sql)
+  - [点击查看API设计](https://github.com/SYSU-undefined/QR-Meals-SE/blob/master/docs/API.md)
 
 - 8. 生产规范指南
 
   - [点击查看生产规范指南](docs/生产规范指南.md)
+
+  - [点击查看 REST API 设计规范](docs/REST API规范.md)
 
 - X1. 会议记录
   - [点击查看会议记录](docs/会议记录.md)
@@ -52,5 +55,5 @@
 
 - XX. 建模练习
 
-  - [点击查看建模练习](docs/建模练习.md)  
+  - [点击查看建模练习](docs/建模练习.md)
   - [点击查看建模者答案](docs/建模答案.md)
