@@ -18,3 +18,62 @@ Compose 定位是 「定义和运行多个 Docker 容器的应用（Defining and
 ## docker-compose.yml文件的编写
 
 docker-compose.yml的组织是层级化的，在services下定义各个命名的服务，compose会据此生成对应名称的docker实例。对于每个服务，其实可以看成是compose启动容器的配置，所以这里的配置项其实与docker的run命令基本上是成映射关系的，但是compose也提供了从Dockerfile.txt构建镜像的能力。  
+本项目的docker-compose.yml如下:
+```
+version: "3"
+services:
+  qr-meals-se:
+    image: qr-meals-se
+    ports:
+      - "443:443"
+    networks:
+      - qr-meals-net
+    configs:
+      - prod
+  qr-meals-se-dev:
+    image: qr-meals-se
+    ports:
+      - "444:443"
+    networks:
+      - qr-meals-net-dev
+    configs:
+      - dev
+
+  qr-meals-db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql/data
+    networks:
+      - qr-meals-net
+  
+  qr-meals-db-dev:
+    image: mysql
+    ports:
+      - "6033:3306"
+    networks:
+      - qr-meals-net-dev
+
+  qr-meals-redis:
+    image: redis:alpine
+    networks:
+      - qr-meals-net
+  qr-meals-redis-dev:
+    image: redis:alpine
+    networks:
+      - qr-meals-net-dev
+
+networks:
+  qr-meals-net:
+
+volumes:
+  db-data:
+
+configs:
+  dev:
+    file: ./dev.conf
+  prod:
+    file: ./prod.conf
+
+```
