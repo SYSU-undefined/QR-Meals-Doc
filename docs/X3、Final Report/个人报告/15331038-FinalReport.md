@@ -25,7 +25,7 @@
 ![](./assets/15331038-git-commit-2.png)
 
 ### 最有价值
-使用ts的type declare配合vscode的JSDoc实现代码补全，如图
+使用ts的type declare配合vscode的JSDoc实现代码补全，个人觉得极大地提高了工作效率，可以直接补全出小程序接口以及自己添加的封装，如图
 ![](./assets/15331038-wx-typings.png)
 ![](./assets/15331038-wx-typings-2.gif)
 
