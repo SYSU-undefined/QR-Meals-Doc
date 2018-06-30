@@ -41,5 +41,6 @@ X2、Tech Report
 X3、Final Report
 - [15331205-FinalReport](https://github.com/SYSU-undefined/QR-Meals-Doc/blob/master/docs/X3、Final%20Report/个人报告/15331205-FinalReport.md)
 - [15331224-FinalReport](https://github.com/SYSU-undefined/QR-Meals-Doc/blob/master/docs/X3、Final%20Report/个人报告/15331224-FinalReport.md)
+- [15331038-FinalReport](https://github.com/SYSU-undefined/QR-Meals-Doc/blob/master/docs/X3、Final%20Report/个人报告/15331038-FinalReport.md)
 
 [X4、建模练习](https://github.com/SYSU-undefined/QR-Meals-Doc/blob/master/docs/X4、建模练习)
