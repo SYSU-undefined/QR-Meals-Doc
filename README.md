@@ -44,3 +44,5 @@ X3.Final Report
 - [15331038-FinalReport](docs/X3.FinalReport/personalreport/15331038-FinalReport.md)
 
 [X4.建模练习](docs/X4.建模练习)
+
+[X5.团队贡献](docs/teamwork/teamwork.md)
