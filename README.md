@@ -39,8 +39,8 @@ X2.Tech Report
 - [15331196-林剑-关于迭代方法与用例](http://blog.resetbypear.com/2018-04-15/%E5%85%B3%E4%BA%8E%E8%BF%AD%E4%BB%A3%E6%96%B9%E6%B3%95%E4%B8%8E%E7%94%A8%E4%BE%8B/)
 
 X3.Final Report
-- [15331205-FinalReport](docs/X3.FinalReport/personal report/15331205-FinalReport.md)
-- [15331224-FinalReport](docs/X3.FinalReport/personal report/15331224-FinalReport.md)
-- [15331038-FinalReport](docs/X3.FinalReport/personal report/15331038-FinalReport.md)
+- [15331205-FinalReport](docs/X3.FinalReport/personalreport/15331205-FinalReport.md)
+- [15331224-FinalReport](docs/X3.FinalReport/personalreport/15331224-FinalReport.md)
+- [15331038-FinalReport](docs/X3.FinalReport/personalreport/15331038-FinalReport.md)
 
 [X4.建模练习](docs/X4.建模练习)
