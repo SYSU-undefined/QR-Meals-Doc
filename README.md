@@ -26,7 +26,7 @@
 
 8.生产规范与指南
 - 8.1 [JavaScript 代码规范](docs/8.productrules/生产规范指南.md)
-- 8.2 [REST API 设计规范](docs/8.productrules/REST API规范.md)
+- 8.2 [REST API 设计规范](docs/8.productrules/RESTAPI规范.md)
 - 8.3 [逻辑架构到应用程序映射指南](docs/8.productrules/逻辑架构到应用程序映射指南.md)
 - 8.4 [物理架构云上部署 dock-compose.yml 文件编写与使用](docs/8.productrules/docker-compose.md)
 
