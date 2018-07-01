@@ -21,7 +21,7 @@
 - [7.1 UI design（UI设计）](docs/7.Design/7.1UIdesign/UI设计.md)
 - [7.2 Database design（数据库设计）](docs/7.Design/7.2Databasedesign/数据库设计.md)
 - [7.3 API design（API设计）](https://github.com/SYSU-undefined/QR-Meals-SE/blob/master/docs/API.md)
-- [7.4 Software Architecture Document（软件架构文档）](docs/7.Design/7.4SoftwareArchitectureDocument（软件架构文档）/软件架构文档.md)
+- [7.4 Software Architecture Document（软件架构文档）](docs/7.Design/7.4SoftwareArchitectureDocument/软件架构文档.md)
 - [7.5 Usecase design（用例设计）](docs/7.Design/7.5Usecasedesign/用例设计.md)
 
 8.生产规范与指南
