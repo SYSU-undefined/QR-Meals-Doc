@@ -14,7 +14,7 @@
 - [6.2 Use Cases（用例+活动图）](docs/6.Requirementspecification/6.2UseCases/用例+活动图.md)
 - [6.3 Domian Models（领域模型）](docs/6.Requirementspecification/6.3DomianModels/领域模型.md)
 - [6.4 State Models（状态模型）](docs/6.Requirementspecification/6.4StateModels/状态模型.md)
-- [6.5 System Sequence Diagrams（功能模型）](docs/6.Requirementspecification/6.5SystemSequence%/功能模型.md)
+- [6.5 System Sequence Diagrams（功能模型）](docs/6.Requirementspecification/6.5SystemSequenceDiagrams/功能模型.md)
 - [6.6 Supplementary Requirements（补充需求）](docs/6.Requirementspecification/6.6SupplementaryRequirements/补充需求.md)
 
 7.Design（设计）
