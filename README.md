@@ -48,3 +48,5 @@ X3.Final Report
 [X5.团队贡献](docs/X3.FinalReport/teamwork/teamwork.md)
 
 [gif展示](docs/gif图/gifshow.md)
+
+[软件设计文档](docs/软甲设计文档.md)
